@@ -90,7 +90,7 @@
       "preset_name": "date",
       "values": {
         "form_snippet": "date.html",
-        "display_snippet": "date.html",
+        "display_snippet": "date_ddmmyyyy.html",
         "validators": "scheming_required isodate convert_to_json_if_date"
       }
     },

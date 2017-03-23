@@ -23,6 +23,12 @@
       "form_placeholder": "eg. Some useful notes about the data"
     },
     {
+      "field_name": "quality_statement",
+      "label": "Quality Statement",
+      "form_snippet": "markdown.html",
+      "form_placeholder": "data quality statement"
+    },
+    {
       "field_name": "tag_string",
       "label": "Tags",
       "preset": "tag_string_autocomplete",
@@ -30,7 +36,7 @@
     },
     {
       "field_name": "custodian",
-      "label": "Custodian",
+      "label": "Author",
       "form_placeholder": "Joe Bloggs",
       "display_property": "dc:creator"
     },
@@ -66,8 +72,23 @@
       "display_snippet": "spatial.html"
     },
     {
+      "field_name": "additional_extent",
+      "label": "Additional Extent Information",
+      "display_snippet": "text.html"
+    },
+    {
       "field_name": "temporal_extent",
       "label": "Temporal Coverage",
+      "display_snippet": "text.html"
+    },
+    {
+      "field_name": "quality",
+      "label": "Quality",
+      "display_snippet": "text.html"
+    },
+    {
+      "field_name": "date_language",
+      "label": "Key dates and languages",
       "display_snippet": "text.html"
     },
     {
@@ -157,53 +178,6 @@
       "field_name": "update_frequency",
       "label": "Frequency of change",
       "display_snippet": "text.html"
-    },
-    {
-      "field_name": "type",
-      "label": "Type",
-      "display_snippet": "text.html"
-    },
-    {
-      "field_name": "created",
-      "label": "Date Created",
-      "form_placeholder": "yyyy/mm/dd or yyyy-mm-dd",
-      "preset": "date"
-    },
-    {
-      "field_name": "last_modified",
-      "label": "Last updated",
-      "display_snippet": "date.html"
-    },
-    {
-      "field_name": "map_service_id",
-      "label": "Map Service ID",
-      "form_placeholder": "the corresponding Map Service ID from geocortex",
-      "form_snippet": "text.html"
-    },
-    {
-      "field_name": "layer_id",
-      "label": "Layer ID",
-      "form_placeholder" : "the corresponding layer ID from geocortex, compulsory for Geoserver WMS layers",
-      "form_snippet": "text.html"
-    },
-    {
-      "field_name": "map_type",
-      "label": "Map Type",
-      "preset": "select",
-      "choices": [
-        {
-          "value": "MapServiceLayer",
-          "label": "Map Service and Layer"
-        },
-        {
-          "value": "Layer",
-          "label": "WMS Layer"
-        },
-        {
-          "value": "MapService",
-          "label": "Map Service"
-        }
-      ]
     }
   ],
   "resource_fields": [

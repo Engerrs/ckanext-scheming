@@ -194,6 +194,7 @@ class SchemingDatasetsPlugin(p.SingletonPlugin, DefaultDatasetForm,
     p.implements(p.IDatasetForm, inherit=True)
     p.implements(p.IActions)
     p.implements(p.IValidators)
+    p.implements(p.IFacets)
 
     SCHEMA_OPTION = 'scheming.dataset_schemas'
     FALLBACK_OPTION = 'scheming.dataset_fallback'
@@ -259,7 +260,27 @@ class SchemingDatasetsPlugin(p.SingletonPlugin, DefaultDatasetForm,
             'scheming_dataset_schema_list': scheming_dataset_schema_list,
             'scheming_dataset_schema_show': scheming_dataset_schema_show,
         }
+   
+    # IFacets
+    def dataset_facets(self, facets_dict, package_type):
+        # We will actually remove all the core facets and add our own
+        facets_dict.clear()        
+        facets_dict['topic'] = p.toolkit._('Topic Category')
+	facets_dict['tags'] = p.toolkit._('Tags')
+        facets_dict['organization']= p.toolkit._('Organisation')
+	facets_dict['res_format'] = p.toolkit._('Formats')
+        #facets_dict['license'] = p.toolkit._('Licenses')
+        return facets_dict
 
+    def organization_facets(self, facets_dict, organization_type, package_type):
+        #facets_dict.clear()
+        facets_dict.clear()
+        facets_dict['topic'] = p.toolkit._('Topic Category')
+        facets_dict['tags'] = p.toolkit._('Tags')
+        facets_dict['organization']= p.toolkit._('Organisation')
+        facets_dict['res_format'] = p.toolkit._('Formats')
+        #facets_dict['license'] = p.toolkit._('Licenses')
+        return facets_dict
 
 class SchemingGroupsPlugin(p.SingletonPlugin, _GroupOrganizationMixin,
                            DefaultGroupForm, _SchemingMixin):

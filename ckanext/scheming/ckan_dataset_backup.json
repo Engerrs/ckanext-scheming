@@ -23,6 +23,12 @@
       "form_placeholder": "eg. Some useful notes about the data"
     },
     {
+      "field_name": "quality_statement",
+      "label": "Quality Statement",
+      "form_snippet": "markdown.html",
+      "form_placeholder": "data quality statement"
+    },
+    {
       "field_name": "tag_string",
       "label": "Tags",
       "preset": "tag_string_autocomplete",

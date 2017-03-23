@@ -204,6 +204,23 @@
           "label": "Map Service"
         }
       ]
+    },
+    {
+      "field_name": "workflow_type",
+      "label": "Workflow type",
+      "form_snippet": null,
+      "validators": "workflow_type_validator"
+    },
+    {
+      "field_name": "workflow_stage",
+      "label": "Workflow state",
+      "form_snippet": null,
+      "validators": "workflow_stage_validator"
+    },
+    {
+      "field_name": "original_id_of_revision",
+      "label": "Original dataset",
+      "preset": "revision_field"
     }
   ],
   "resource_fields": [
